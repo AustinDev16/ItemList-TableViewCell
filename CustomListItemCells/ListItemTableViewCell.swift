@@ -12,25 +12,13 @@ class ListItemTableViewCell: UITableViewCell {
 
  
     
-    // UIElements
+    // MARK: - UIElements
     
     var itemNameLabel = UILabel()
     var checkBox = UIButton()
     var responsibleParty = UIButton()
     
-    
-    
-    func addLabelToView(item: ListItem){
-        let label = UILabel()
-        self.contentView.addSubview(label)
-        label.text = item.name
-        label.translatesAutoresizingMaskIntoConstraints = false
-        let centerX = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: self.contentView, attribute: .centerX, multiplier: 1.0, constant: 0)
-        let centerY = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0)
-        self.contentView.addConstraints([centerX, centerY])
-    }
-    
-    
+    // MARK: - Update Cell
     func updateWithItem(item: ListItem){
         addElementsToView()
         
@@ -39,6 +27,7 @@ class ListItemTableViewCell: UITableViewCell {
         //
         checkBox.setImage(#imageLiteral(resourceName: "incomplete"), for: .normal)
         itemNameLabel.text = item.name
+        responsibleParty.setImage(#imageLiteral(resourceName: "followers"), for: .normal)
         
         
         
@@ -56,8 +45,15 @@ class ListItemTableViewCell: UITableViewCell {
         // Item Label
         let nameLabelLeading = NSLayoutConstraint(item: self.itemNameLabel, attribute: .leading, relatedBy: .equal, toItem: self.checkBox, attribute: .trailing, multiplier: 1.0, constant: 8)
         let nameLabelCenterY = NSLayoutConstraint(item: self.itemNameLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0)
-        let nameLabelTrailing = NSLayoutConstraint(item: self.itemNameLabel, attribute: .trailing, relatedBy: .equal, toItem: self.contentView, attribute: .trailingMargin, multiplier: 1.0, constant: 0)
+        let nameLabelTrailing = NSLayoutConstraint(item: self.itemNameLabel, attribute: .trailing, relatedBy: .equal, toItem: self.responsibleParty, attribute: .leading, multiplier: 1.0, constant: -8)
         self.contentView.addConstraints([nameLabelLeading, nameLabelCenterY, nameLabelTrailing])
+        
+        // Responsible Party (Person)
+        let personTop = NSLayoutConstraint(item: self.responsibleParty, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .topMargin, multiplier: 1.0, constant: 0)
+        let personBottom = NSLayoutConstraint(item: self.responsibleParty, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottomMargin, multiplier: 1.0, constant: 0.0)
+        let personTrailing = NSLayoutConstraint(item: self.responsibleParty, attribute: .trailingMargin, relatedBy: .equal, toItem: self.contentView, attribute: .trailingMargin, multiplier: 1.0, constant: -8)
+        let personWidth = NSLayoutConstraint(item: self.responsibleParty, attribute: .width, relatedBy: .equal, toItem: self.responsibleParty, attribute: .height, multiplier: 1.0, constant: 0)
+        self.contentView.addConstraints([personTop, personBottom, personTrailing, personWidth])
     }
     
     func addElementsToView(){
