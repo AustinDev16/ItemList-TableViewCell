@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		FACF38CE1DA99DF800513642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38CD1DA99DF800513642 /* AppDelegate.swift */; };
-		FACF38D01DA99DF800513642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38CF1DA99DF800513642 /* ViewController.swift */; };
 		FACF38D31DA99DF800513642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF38D11DA99DF800513642 /* Main.storyboard */; };
 		FACF38D51DA99DF800513642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACF38D41DA99DF800513642 /* Assets.xcassets */; };
 		FACF38D81DA99DF800513642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF38D61DA99DF800513642 /* LaunchScreen.storyboard */; };
+		FACF38E01DA99E7D00513642 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38DF1DA99E7D00513642 /* MainTableViewController.swift */; };
+		FACF38E21DA99E9E00513642 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E11DA99E9E00513642 /* ModelController.swift */; };
+		FACF38E61DA9A1DC00513642 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E51DA9A1DC00513642 /* ListItemView.swift */; };
+		FACF38E81DA9A75700513642 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FACF38CA1DA99DF800513642 /* CustomListItemCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomListItemCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF38CD1DA99DF800513642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FACF38CF1DA99DF800513642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACF38D21DA99DF800513642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACF38D41DA99DF800513642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACF38D71DA99DF800513642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACF38D91DA99DF800513642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACF38DF1DA99E7D00513642 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = ../MainTableViewController.swift; sourceTree = "<group>"; };
+		FACF38E11DA99E9E00513642 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		FACF38E51DA9A1DC00513642 /* ListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		FACF38C11DA99DF800513642 = {
 			isa = PBXGroup;
 			children = (
+				FACF38E51DA9A1DC00513642 /* ListItemView.swift */,
 				FACF38CC1DA99DF800513642 /* CustomListItemCells */,
 				FACF38CB1DA99DF800513642 /* Products */,
 			);
@@ -55,8 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				FACF38CD1DA99DF800513642 /* AppDelegate.swift */,
-				FACF38CF1DA99DF800513642 /* ViewController.swift */,
+				FACF38DF1DA99E7D00513642 /* MainTableViewController.swift */,
 				FACF38D11DA99DF800513642 /* Main.storyboard */,
+				FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */,
+				FACF38E11DA99E9E00513642 /* ModelController.swift */,
 				FACF38D41DA99DF800513642 /* Assets.xcassets */,
 				FACF38D61DA99DF800513642 /* LaunchScreen.storyboard */,
 				FACF38D91DA99DF800513642 /* Info.plist */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACF38D01DA99DF800513642 /* ViewController.swift in Sources */,
+				FACF38E81DA9A75700513642 /* ListItemTableViewCell.swift in Sources */,
+				FACF38E21DA99E9E00513642 /* ModelController.swift in Sources */,
+				FACF38E01DA99E7D00513642 /* MainTableViewController.swift in Sources */,
 				FACF38CE1DA99DF800513642 /* AppDelegate.swift in Sources */,
+				FACF38E61DA9A1DC00513642 /* ListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
