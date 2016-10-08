@@ -15,6 +15,7 @@
 		FACF38E21DA99E9E00513642 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E11DA99E9E00513642 /* ModelController.swift */; };
 		FACF38E61DA9A1DC00513642 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E51DA9A1DC00513642 /* ListItemView.swift */; };
 		FACF38E81DA9A75700513642 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */; };
+		FACF38EA1DA9B78A00513642 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF38E91DA9B78A00513642 /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FACF38E11DA99E9E00513642 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		FACF38E51DA9A1DC00513642 /* ListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		FACF38E91DA9B78A00513642 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				FACF38CD1DA99DF800513642 /* AppDelegate.swift */,
 				FACF38DF1DA99E7D00513642 /* MainTableViewController.swift */,
+				FACF38E91DA9B78A00513642 /* Protocol.swift */,
 				FACF38D11DA99DF800513642 /* Main.storyboard */,
 				FACF38E71DA9A75700513642 /* ListItemTableViewCell.swift */,
 				FACF38E11DA99E9E00513642 /* ModelController.swift */,
@@ -151,6 +154,7 @@
 				FACF38E01DA99E7D00513642 /* MainTableViewController.swift in Sources */,
 				FACF38CE1DA99DF800513642 /* AppDelegate.swift in Sources */,
 				FACF38E61DA9A1DC00513642 /* ListItemView.swift in Sources */,
+				FACF38EA1DA9B78A00513642 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +318,7 @@
 				FACF38DE1DA99DF800513642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,7 +11,7 @@ import UIKit
 class ListItemTableViewCell: UITableViewCell {
 
  
-    
+    weak var delegate: ListItemDelegate?
     // MARK: - UIElements
     
     var itemNameLabel = UILabel()
@@ -23,6 +23,7 @@ class ListItemTableViewCell: UITableViewCell {
         addElementsToView()
         
         applyLayoutConstraints()
+        configureButtonActions()
         
         //
         checkBox.setImage(#imageLiteral(resourceName: "incomplete"), for: .normal)
@@ -65,6 +66,19 @@ class ListItemTableViewCell: UITableViewCell {
         self.contentView.addSubview(checkBox)
         self.contentView.addSubview(responsibleParty)
     }
+    
+    func configureButtonActions(){
+        checkBox.addTarget(self, action: #selector(checkBoxTapped), for: .touchUpInside)
+        responsibleParty.addTarget(self, action: #selector(responsiblePartyTapped), for: .touchUpInside)
+    }
+    
+    func checkBoxTapped(){
+        delegate?.checkBoxTapped()
+    }
+    
+    func responsiblePartyTapped(){
+        delegate?.responsiblePartyTapped()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -76,8 +90,5 @@ class ListItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func checkBoxTapped(_ sender: AnyObject) {
-    }
-    @IBAction func personButtonTapped(_ sender: AnyObject) {
-    }
+ 
 }
