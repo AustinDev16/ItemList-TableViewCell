@@ -36,7 +36,9 @@ class ListItemTableViewCell: UITableViewCell {
         
         applyLayoutConstraints()
         
+        //
         checkBox.setImage(#imageLiteral(resourceName: "incomplete"), for: .normal)
+        itemNameLabel.text = item.name
         
         
         
@@ -45,11 +47,17 @@ class ListItemTableViewCell: UITableViewCell {
     
     func applyLayoutConstraints(){
         // CheckBox button
-        let checkBoxTop = NSLayoutConstraint(item: self.checkBox, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1.0, constant: 0)
-        let checkBoxLeading = NSLayoutConstraint(item: self.checkBox, attribute: .leading, relatedBy: .equal, toItem: self.contentView, attribute: .leading, multiplier: 1.0, constant: 0)
-        let checkBoxBottom = NSLayoutConstraint(item: self.checkBox, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1.0, constant: 0)
+        let checkBoxTop = NSLayoutConstraint(item: self.checkBox, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .topMargin, multiplier: 1.0, constant: 0)
+        let checkBoxLeading = NSLayoutConstraint(item: self.checkBox, attribute: .leading, relatedBy: .equal, toItem: self.contentView, attribute: .leadingMargin, multiplier: 1.0, constant: 0)
+        let checkBoxBottom = NSLayoutConstraint(item: self.checkBox, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottomMargin, multiplier: 1.0, constant: 0)
         let checkBoxWidth = NSLayoutConstraint(item: self.checkBox, attribute: .width, relatedBy: .equal, toItem: self.checkBox , attribute: .height, multiplier: 1.0, constant: 0)
         self.contentView.addConstraints([checkBoxTop, checkBoxLeading, checkBoxBottom, checkBoxWidth])
+        
+        // Item Label
+        let nameLabelLeading = NSLayoutConstraint(item: self.itemNameLabel, attribute: .leading, relatedBy: .equal, toItem: self.checkBox, attribute: .trailing, multiplier: 1.0, constant: 8)
+        let nameLabelCenterY = NSLayoutConstraint(item: self.itemNameLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1.0, constant: 0)
+        let nameLabelTrailing = NSLayoutConstraint(item: self.itemNameLabel, attribute: .trailing, relatedBy: .equal, toItem: self.contentView, attribute: .trailingMargin, multiplier: 1.0, constant: 0)
+        self.contentView.addConstraints([nameLabelLeading, nameLabelCenterY, nameLabelTrailing])
     }
     
     func addElementsToView(){
