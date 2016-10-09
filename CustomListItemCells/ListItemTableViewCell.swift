@@ -12,6 +12,7 @@ class ListItemTableViewCell: UITableViewCell {
 
  
     weak var delegate: ListItemDelegate?
+    var listItem: ListItem?
     // MARK: - UIElements
     
     var itemNameLabel = UILabel()
@@ -73,11 +74,11 @@ class ListItemTableViewCell: UITableViewCell {
     }
     
     func checkBoxTapped(){
-        delegate?.checkBoxTapped()
+        delegate?.checkBoxTapped(cell: self)
     }
     
     func responsiblePartyTapped(){
-        delegate?.responsiblePartyTapped()
+        delegate?.responsiblePartyTapped(cell: self)
     }
     override func awakeFromNib() {
         super.awakeFromNib()

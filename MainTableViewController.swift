@@ -9,11 +9,18 @@
 import UIKit
 
 class MainTableViewController: UITableViewController, ListItemDelegate {
-    func checkBoxTapped() {
+    func checkBoxTapped(cell: ListItemTableViewCell) {
         print("checkbox tapped")
+        
+//        guard let item = cell.listItem else {return}
+        cell.listItem?.name = "THIS one is TAPPED"
+        
+        tableView.reloadData()
+        
+        
     }
     
-    func responsiblePartyTapped() {
+    func responsiblePartyTapped(cell: ListItemTableViewCell) {
         print("person tapped")
     }
 
@@ -48,6 +55,7 @@ class MainTableViewController: UITableViewController, ListItemDelegate {
      
         cell.updateWithItem(item: item)
         cell.delegate = self
+        cell.listItem = item
 
         return cell
     }

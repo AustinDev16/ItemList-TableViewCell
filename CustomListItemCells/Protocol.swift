@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ListItemDelegate: class {
-    func checkBoxTapped()
-    func responsiblePartyTapped()
+    func checkBoxTapped(cell: ListItemTableViewCell)
+    func responsiblePartyTapped(cell: ListItemTableViewCell)
 }
