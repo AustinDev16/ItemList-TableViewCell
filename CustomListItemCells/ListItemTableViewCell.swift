@@ -30,10 +30,6 @@ class ListItemTableViewCell: UITableViewCell {
         checkBox.setImage(#imageLiteral(resourceName: "incomplete"), for: .normal)
         itemNameLabel.text = item.name
         responsibleParty.setImage(#imageLiteral(resourceName: "followers"), for: .normal)
-        
-        
-        
-        
     }
     
     func applyLayoutConstraints(){
